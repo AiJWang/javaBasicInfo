@@ -23,6 +23,7 @@ import java.util.Iterator;
  * <? super son> 允许传入son及其父类
  */
 public class FanXing {
+
     public static void main(String[] args) {
         //这个<Sring> 就是传说中的泛型
         ArrayList<String> li = new ArrayList<String>();
@@ -57,6 +58,11 @@ public class FanXing {
         Iterator<?> it = al.iterator();
         while (it.hasNext())
             System.out.println(it.next());
+    }
+
+    public static <T> T getT(){
+        T a=null;
+        return a;
     }
 
 }
