@@ -10,7 +10,7 @@ public class Employee {
         BUSY,
         HOME;
     }
-    Employee(){
+    public Employee(){
 
     }
     Employee( String name,Integer age, double salary){
@@ -18,7 +18,7 @@ public class Employee {
         this.age=age;
         this.salary=salary;
     }
-    Employee( String name,Integer age, double salary,Status status){
+    public Employee(String name, Integer age, double salary, Status status){
         this.name=name;
         this.age=age;
         this.salary=salary;

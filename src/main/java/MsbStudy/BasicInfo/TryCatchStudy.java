@@ -1,4 +1,4 @@
-package MsbStudy;
+package MsbStudy.BasicInfo;
 
 /**
  * throw 和 throws区别

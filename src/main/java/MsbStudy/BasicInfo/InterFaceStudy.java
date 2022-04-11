@@ -1,4 +1,4 @@
-package MsbStudy;
+package MsbStudy.BasicInfo;
 
 /**
  * 接口学习：

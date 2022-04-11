@@ -1,4 +1,4 @@
-package MsbStudy;
+package MsbStudy.BasicInfo;
 
 /**
  * 内部类:成员内部类（静态，非静态），局部内部类（方法内，块内，构造器内）

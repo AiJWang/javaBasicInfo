@@ -1,6 +1,7 @@
 package StreamAPIStudy;
 
 import Study.ArraysStudy.Person;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -211,5 +212,22 @@ public class StreamBasicStudy {
         double avg=employees.stream()
                 .collect(Collectors.averagingDouble(Employee::getSalary));
         System.out.println(avg);
+        //map
+        Map<String, Employee.Status> s= employees.stream()
+                .collect(Collectors.toMap(Employee::getName,Employee::getStatus));
+        System.out.println(s);
+        //分组,根据Status分组
+        Map<Employee.Status,List<Employee>> ss=employees.stream()
+                .collect(Collectors.groupingBy(Employee::getStatus));
+        System.out.println(ss);
+        //分区
+        Map<Boolean, List<Employee>> fq=employees.stream()
+                .collect(Collectors.partitioningBy(e->e.getSalary()>5000));
+        System.out.println(fq);
+        //连接字符串
+        String s1=employees.stream()
+                .map(Employee::getName)
+                .collect(Collectors.joining(","));
+        System.out.println(s1);
     }
 }
