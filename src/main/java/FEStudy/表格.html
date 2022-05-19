@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--table表示表格
+tr表示行
+td是单元格
+th特殊单元格，表头，默认文字加粗，居中
+默认情况下没有边框
+align 设置格式：剧中，靠左，靠右
+background 设置背景图片 background="img/img.png"
+bgcolor 设置背景颜色
+行合并，列相同，行不同的合并了，留第一个,比如合并成绩，一共三行成绩，所以rowspan=3
+列合并 colspan="2"
+-->
+<table border="1px" cellspacing="0" width="200" height="50" style="word-wrap: break-word">
+    <tr bgcolor="#ff7f50">
+        <th>编号</th>
+        <th style="color: brown">姓名</th>
+        <th>年纪</th>
+        <th>成绩</th>
+    </tr>
+    <tr>
+        <td align="center" style="color: brown">002卜算子·咏梅 - 百度汉语
+            作者：毛泽东
+
+            风雨送春归，飞雪迎春到。
+            已是悬崖百丈冰，犹有花枝俏。
+            俏也不争春，只把春来报。
+            待到山花烂漫时，她在丛中笑<br>。002卜算子·咏梅 - 百度汉语
+            作者：毛泽东
+
+            风雨送春归，飞雪迎春到。
+            已是悬崖百丈冰，犹有花枝俏。
+            俏也不争春，只把春来报。
+            待到山花烂漫时，她在丛中笑。002卜算子·咏梅 - 百度汉语
+            作者：毛泽东
+
+            风雨送春归，飞雪迎春到。
+            已是悬崖百丈冰，犹有花枝俏。
+            俏也不争春，只把春来报。
+            待到山花烂漫时，她在丛中笑。002卜算子·咏梅 - 百度汉语
+            作者：毛泽东
+
+            风雨送春归，飞雪迎春到。
+            已是悬崖百丈冰，犹有花枝俏。
+            俏也不争春，只把春来报。
+            待到山花烂漫时，她在丛中笑。</td>
+        <td>小明</td>
+        <td>23</td>
+        <!--行合并-->
+        <td rowspan="3">90</td>
+    </tr>
+    <tr>
+        <!--列合并-->
+        <td colspan="2">003</td>
+        <td>24</td>
+
+    </tr>
+    <tr>
+        <td>004</td>
+        <td>小绿</td>
+        <td>23</td>
+
+    </tr>
+</table>
+</body>
+</html>
