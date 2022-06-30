@@ -44,6 +44,7 @@ public class NeiBuLei {
         {
             System.out.println("这是局部代码块，普通块");
         }
+
     }
     static {
         System.out.println("这是一个静态块，最先加载");
@@ -96,6 +97,7 @@ class TestMain{
     public static void main(String[] args) {
         //创建外部类对象
         NeiBuLei n=new NeiBuLei();
+        n.eat();
         //创建静态内部类对象
         NeiBuLei.C c=new NeiBuLei.C();
         //创建非静态内部类对象
