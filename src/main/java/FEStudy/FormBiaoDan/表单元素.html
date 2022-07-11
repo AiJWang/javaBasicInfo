@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<!-- 表单元素-->
+<!--文本框
+  input标签应用广泛，通过type不同值，变现为不同形态
+  type="text" 文本框，内部文字可见
+  value="aaa" 文本框中默认填充的内容，可被删除
+  placeholder="请输入key值"  提示语，灰色
+  readonly: 文本框内容只读，不可修改，提交时会带上
+  disable：文本框内容也是只读，不可修改，提交时不会带上
+  密码框：密文传输，输入的内容前端不可见
+-->
+<form  action="http://tcprocess.58corp.com/resultMark" method="get">
+  <input type="text" name="key" placeholder="请输入key值"><br>
+  <input type="text" name="key1" value="请输入key1值"><br>
+  <input type="text" name="key2" value="请输入key2值" readonly><br>
+  <input type="text" name="key3" value="请输入key3值" disabled><br>
+<!--  密码框：密文传输，输入的内容前端不可见-->
+  <input type="password" name="pwd"><br>
+<!--  单选框 radio
+  一组单选按钮通过name属性控制，相同name属性，视为一个分组，只能选一个
+  正常状态下，不管选择男还是女，提交数据均为 gender=on
+  为了区分，需要加上value值 提交数据就是gender=对应value
+  checked: 默认选中
+-->
+  <input type="radio" name="gender" value="0" checked> 男
+  <input type="radio" name="gender" value="1"> 女
+  <input type="radio" name="gender" value="2"> Thailand<br>
+<!--  多选按钮 checkbox
+ 其他属性跟上面一样
+-->
+  <h5>最喜欢的语言</h5>
+  <input type="checkbox" name="favlan" value="0"> java<br>
+  <input type="checkbox" name="favlan" value="1"> python<br>
+  <input type="checkbox" name="favlan" value="2"> go<br>
+  <input type="checkbox" name="favlan" value="3"> php<br>
+
+
+<!--  文件-->
+  <input type="file">
+<!--  隐藏域, 偷偷提交的，直接拼在参数后面-->
+  <input type="hidden" name="test" value="123123">
+<!--普通按钮，点击没有效果，学了js后，可加入事件，弹个框啥的-->
+  <input type="button" value="普通按钮">
+<!--  重置按钮，将页面回复到初始状态，输入框内容清空-->
+  <input type="reset">
+<!--  图片按钮，点击之后效果跟submit相同，直接调接口了-->
+  <input type="image" src="img.png">
+<!--  下拉列表，只有加上name，提交的时候才能带上  selected 默认选中  multiple：可多选（不设置就单选）-->
+  <select name="city" multiple>
+    <option value="0">----请选择----</option>
+    <option value="1" selected>青岛</option>
+    <option value="2">西安</option>
+    <option value="3">重庆</option>
+    <option value="4">厦门</option>
+  </select>
+<!--  多行文本框  个人描述啥的  style 为不可设置大小，不设置的话可以设置大小，通过拖拽
+可根据rows与cols设置行与列
+-->
+  <textarea name="duohang" style="resize: none" rows="10" cols="30">请在此处写作文，不少于500字...</textarea>
+  <br>
+<!--  label标签
+  一般会在想要获得焦点的标签上加入一个id属性，然后label中的for跟id配合使用，点击用户名的时候，光标自动跳到输入框内
+-->
+  <label for="uname">用户名</label> <input type="text" name="userName" id="uname"><br>
+<!--  emial 自动检测输入内容是不是email格式-->
+  请输入邮箱地址<input type="email" name="email"><br>
+<!--  url 自动检测输入的是不是网址-->
+  请输入跳转地址<input type="url" name="targetUrl"><br>
+<!--  数字 可设置最小值，最大值，步长-->
+  请输入数字<input type="number" max="10" min="1" step="2" value="4">
+  <!--  滑动条 可设置最小值，最大值，步长-->
+  请设置数字<input type="range" max="10" min="1" step="2" value="4">
+<!--  日期-->
+  <input type="date">
+<!--  月份-->
+  <input type="month">
+<!--  星期-->
+  <input type="week">
+  <br>
+  <br>
+  <br>
+<!--
+required: 必填，不填点提交会有提示
+autofocus: 自动聚焦，进入页面，光标就在这个输入框内
+-->
+  <input type="text" required>
+  <input type="text" autofocus>
+  <input type="submit">
+</form>
+</body>
+</html>
