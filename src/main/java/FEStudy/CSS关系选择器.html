@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--
+  div:块元素，有换行效果，不管文案多长，div都是一整行
+  span:行内元素，没有换行效果，span中内容有多大，span包裹的区域就有多大
+  一般用于结合css页面布局
+-->
+  <style type="text/css">
+
+    div{
+      border: 1px red solid;/*边框红色，实线*/
+    }
+    span{
+      border: 1px green solid;
+    }
+    /*只要归属于div下的h1就都修饰*/
+    div h1{
+      color: green;
+    }
+    /*只有归属于div下的儿子h1才修饰*/
+    div>h1{
+      color: chartreuse;
+    }
+  /*  属性选择器，用的比较少*/
+    input[type="password"]{
+      color: blue;
+    }
+    input[type="text"]{
+      background: chartreuse;
+    }
+    input[type="text"][value="user1"]{
+      color: deeppink;
+    }
+  /*  伪类选择器：是修饰选择器的，比如当鼠标移动到文案上，文案显示红色，多用于超链接*/
+  /*  未点击是状态，即默认初始状态 颜色*/
+    .weileitest:link{
+      color: aqua;
+    }
+    /*  鼠标悬浮时状态， 颜色*/
+  .weileitest:hover{
+    color: deeppink;
+  }
+    /*  鼠标点击时状态， 颜色*/
+    .weileitest:active{
+      color: blue;
+    }
+    /*  鼠标点击完成之后的状态， 颜色*/
+    .weileitest:visited{
+      color: green;
+    }
+  </style>
+</head>
+<body>
+<div>CSS Test</div>
+<div>CSS Test</div>
+<span>span test</span>
+<span>span test</span>
+<span>span test</span>
+<span>span test</span>
+<div>
+  <h1>div 的儿子</h1>
+  <h1>div 的儿子</h1>
+  <h1>div 的儿子</h1>
+  <span>
+    <h1>span 的儿子  div的孙子</h1>
+    <h1>span 的儿子  div的孙子</h1>
+    <h1>span 的儿子  div的孙子</h1>
+  </span>
+</div>
+<form>
+  用户名<input type="text" value="user">
+  用户名1<input type="text" value="user1">
+  密码<input type="password" value="123456">
+  <input type="submit">
+</form>
+<a href="多媒体标签.html">伪类选择器的超链接</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    三种选择器优先级：id>class>元素  -->
+    <style type="text/css">
+       /*基本选择器：元素选择器
+        通过元素名字进行定位 h1，所有h1的元素都会被修饰
+       */
+
+        h1{
+            color: chartreuse;
+        }
+    /*   基本选择器：类选择器  通过相同class进行渲染
+         应用场景：不同标签使用相同类型
+         .className{
+            样式
+         }
+    */
+       .myclass{
+           color: darkorange;
+       }
+    /*   基本选择器：id选择器，可以定位到唯一的元素
+          不同的标签可以使用相同id，但是应该人为控制，使每个id唯一
+          #id{
+            样式
+          }
+    */
+       #myId{
+           color: aqua;
+       }
+    </style>
+</head>
+<body>
+<h1>基本选择器：元素选择器</h1>
+<h1 class="myclass">类选择器h1</h1>
+<h2 class="myclass">类选择器h2</h2>
+<h2 id="myId">id选择器</h2>
+</body>
+</html>

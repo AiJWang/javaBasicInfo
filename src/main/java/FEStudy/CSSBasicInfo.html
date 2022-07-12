@@ -3,6 +3,7 @@
 <head>
 <!--    CSS基础知识
  修饰H5页面的
+ 三种书写方式优先级：就近原则  方式1>方式2>方式3
  -->
     <meta charset="UTF-8">
     <title>Title</title>
@@ -15,6 +16,8 @@
             font-family: "Rockwell Condensed";
         }
     </style>
+<!--    CSS书写格式3（推荐使用此方式）  用link引入外部css文件-->
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
 </head>
 <body>
 <!--CSS书写方式1 内嵌样式
@@ -23,5 +26,6 @@
 -->
 <h1 style="color: darkorange; font-family: 华文行楷">CSS标题测试</h1>
 <h2>这是内部样式</h2>
+<h3>这是用link引入外部资源</h3>
 </body>
 </html>
