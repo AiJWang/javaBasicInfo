@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+/*这个是设置了父级定位的*/
+
+      #divF{
+        width: 500px;
+        height: 500px;
+        background-color: green;
+        margin-left: 500px;
+      }
+      #div01{
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+        position: absolute;
+        left: 100px;
+      }
+      #div02{
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+      }
+/*这个是没设置父级定位的*/
+      #divR{
+        width: 500px;
+        height: 500px;
+        background-color: green;
+        margin-left: 500px;
+        position: relative;
+      }
+      #div03{
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+        position: absolute;
+        left: 100px;
+      }
+      #div04{
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+      }
+    </style>
+</head>
+<!--定位 通过position设置-->
+<body>
+<!--静态定位 static，不写position的话默认就是静态定位。-->
+  <img src="img/小图标.png" style="position: static">
+
+<!--相对定位 relative 相对于元素之前的静态定位的移动，可设置left right top bottom
+    设置相对定位后，自己之前的位置不会被占用，其他位置的东西不会变动
+
+    一般不会左右同时设置，上下同时设置。如果都设置了的话：优先级左上>右下
+    应用场景：①小范围移动
+            ②结合绝对定位移动
+
+    z-index：设置堆叠顺序，那个图片在上面，哪个在下面，设置负数在下，正数在上，必须放在设置定位的元素上
+-->
+<div style="width: 500px;height: 500px;background-color: coral">
+  <div style="width: 100px;height: 100px;background-color: greenyellow;position: relative;bottom: 10px;right: 20px;z-index: 10"></div>
+  <div style="width: 100px;height: 100px;background-color: red;position: relative;bottom: 10px;right: 20px;z-index: -10"></div>
+  <div style="width: 100px;height: 100px;background-color: rebeccapurple"></div>
+</div>
+<!--绝对定位,请看上方header
+  当设置了绝对定位，他会向上一直找父级是否有定位，如果找不到定位，就根据body变化
+  如果有父级有定位（绝对定位，相对定位，固定定位），但是一般会设置父级为相对定位，当前元素为绝对定位。这样元素就会相对父级发生位置变化
+  无论是上面哪一种，都会释放原来自己的位置，然后被其他元素占用
+-->
+<div id="divF">
+  <div id="div01">11</div>
+  <div id="div02">22</div>
+</div>
+<div id="divR">
+  <div id="div03">33</div>
+  <div id="div04">44</div>
+</div>
+</body>
+</html>
