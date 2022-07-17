@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+/*将所有的内边距外边距边框距离都设置为0*/
+        *{
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        /*div{*/
+        /*    width: 100px;*/
+        /*    height: 100px;*/
+        /*    background-color: chartreuse;*/
+        /*    margin-left: 100px;*/
+        /*    border: 4px red solid;*/
+
+        /*}*/
+        #mydiv{
+            background-color: blue;
+            width: 250px;
+            height: 250px;
+            margin-left: 100px;
+            margin-top: 50px;
+            padding-left: 50px;
+            padding-top: 50px;
+        }
+        #testBox{
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<!--盒子模型是css中重要模型，内边距:padding，外边距 margin，边框border，自己百度吧-->
+<!--<div>i am div </div>-->
+<div id="mydiv">
+    <div id="testBox">盒子模型测试</div>
+</div>
+</body>
+</html>

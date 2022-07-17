@@ -9,15 +9,17 @@ package Study.IOStudy.objectStream;
  */
 
 import java.io.*;
+import java.util.Scanner;
 
 /**
- * 操作对象的流：
+ * 操作对象的流：序列化-反序列化
  * OpjectInputStream, ObjectInputStream
  * */
 public class ObjectStreamStudy {
     public static void main(String[] args) throws Exception {
-        saveClass();
-        readClass();
+        test2();
+//        saveClass();
+//        readClass();
     }
 
     //将对象存到文件中,对象必须实现Serializable 接口
@@ -40,6 +42,31 @@ public class ObjectStreamStudy {
         System.out.println(p);
 
         oi.close();
+    }
+
+    public static void test() throws Exception{
+        //序列化
+        ObjectOutputStream oo=new ObjectOutputStream(new FileOutputStream("src/main/java/Source/ObjectIOStudyText.txt"));
+        oo.writeObject("haha");
+        //反序列化
+        ObjectInputStream o=new ObjectInputStream(new FileInputStream(new File("src/main/java/Source/ObjectIOStudyText.txt")));
+        Object a=o.readObject();
+        System.out.println(a);
+        oo.close();
+        o.close();
+    }
+
+    public static void test2() throws IOException{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw=new BufferedWriter(new FileWriter("src/main/java/Source/BufferedReaderWriterTest.txt"));
+        String s=br.readLine();
+        while (!s.equals("quit")){
+            bw.write(s);
+            bw.newLine();
+            s=br.readLine();
+        }
+        bw.close();
+        br.close();
     }
 
 }

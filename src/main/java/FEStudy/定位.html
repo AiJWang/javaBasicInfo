@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
-/*这个是设置了父级定位的*/
+/*这个是没设置了父级定位的*/
 
       #divF{
         width: 500px;
@@ -16,7 +16,7 @@
         width: 100px;
         height: 100px;
         background-color: rebeccapurple;
-        position: absolute;
+        position:absolute;
         left: 100px;
       }
       #div02{
@@ -24,7 +24,7 @@
         height: 100px;
         background-color: yellowgreen;
       }
-/*这个是没设置父级定位的*/
+/*这个是设置父级定位的*/
       #divR{
         width: 500px;
         height: 500px;
@@ -43,6 +43,14 @@
         width: 100px;
         height: 100px;
         background-color: yellowgreen;
+      }
+      #fixedTest{
+          width: 50px;
+          height: 100px;
+          background-color: aquamarine;
+          position: fixed;
+          right: 0;
+          top: 100px;
       }
     </style>
 </head>
@@ -78,5 +86,7 @@
   <div id="div03">33</div>
   <div id="div04">44</div>
 </div>
+<!--固定定位的，fixed。应用场景：当页面长度过长，需要某个元素固定在页面的某个位置，当页面上下滑动时，此元素位置不动-0。见上方设置-->
+<div id="fixedTest"></div>
 </body>
 </html>
