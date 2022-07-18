@@ -17,14 +17,14 @@ import java.util.Scanner;
  * */
 public class ObjectStreamStudy {
     public static void main(String[] args) throws Exception {
-        test2();
-//        saveClass();
-//        readClass();
+       // test2();
+        saveClass();
+        readClass();
     }
 
-    //将对象存到文件中,对象必须实现Serializable 接口
+    //将对象存到文件中,对象必须实现Serializable 接口。但是当person序列化之后，再增加属性或者方法，反序列化时会报错。解决方式：给类增加序列号
     public static void saveClass() throws IOException {
-        String path="demo/src/main/resources/ResourseForIOStudy/IOStudy/";
+        String path="src/main/java/Source/";
         ObjectOutputStream ob=new ObjectOutputStream(new
                 FileOutputStream(path+"ObjectOutputStream.txt"));
 
@@ -34,7 +34,7 @@ public class ObjectStreamStudy {
 
     //读取存储对象的文件
     public static void readClass() throws Exception{
-        String path="demo/src/main/resources/ResourseForIOStudy/IOStudy/";
+        String path="src/main/java/Source/";
         ObjectInputStream oi=new ObjectInputStream(
                 new FileInputStream(path+"ObjectOutputStream.txt"));
 
