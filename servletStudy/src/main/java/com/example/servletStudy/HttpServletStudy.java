@@ -11,4 +11,9 @@ public class HttpServletStudy extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         System.out.println("这是个get请求");
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
+        System.out.println("这是post请求");
+    }
 }
