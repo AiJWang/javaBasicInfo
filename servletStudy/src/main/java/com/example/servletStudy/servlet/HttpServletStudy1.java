@@ -1,4 +1,4 @@
-package com.example.servletStudy;
+package com.example.servletStudy.servlet;
 
 import com.example.servletStudy.Utils.SqlSessionUtil;
 import com.example.servletStudy.entity.User;
@@ -61,6 +61,7 @@ public class HttpServletStudy1 extends HttpServlet {
             printWriter.println("用户数据异常");
         }else {
             printWriter.println("用户未登录");
+            printWriter.println("无此用户");
         }
         sqlSession.close();
 
