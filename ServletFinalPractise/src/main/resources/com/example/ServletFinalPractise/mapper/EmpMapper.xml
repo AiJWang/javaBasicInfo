@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ServletFinalPractise.mapper.EmpMapper">
+    <update id="update">
+        update emp <set>
+        <if test="name !=null">
+            name=#{name},
+        </if>
+        <if test="salary !=null">
+            salary=#{salary},
+        </if>
+        <if test="age !=null">
+            age=#{age}
+        </if>
+    </set>
+        where id=#{id}
+    </update>
+    <delete id="deleteEmpById">
+        delete from emp where id=#{id}
+    </delete>
+
+
+    <select id="getAllEmp" resultType="com.example.ServletFinalPractise.entity.Emp">
+        select * from emp;
+    </select>
+
+    <select id="getEmpById" resultType="com.example.ServletFinalPractise.entity.Emp">
+        select * from emp where id=#{id}
+    </select>
+</mapper>

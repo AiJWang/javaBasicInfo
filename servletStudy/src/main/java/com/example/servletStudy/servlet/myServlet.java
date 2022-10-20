@@ -1,6 +1,7 @@
 package com.example.servletStudy.servlet;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.util.Date;
 
@@ -23,11 +24,16 @@ import java.util.Date;
 * 2. 打包  build-->Build Artifacts-->选择war包点击build（注意，不是exploded）-->此时war包被放到了target下
 * 3. 将war包复制到Tomcat webapps下，Tomcat启动的时候会自动解压的,然后启动tomcat，访问就行了
 * */
+@WebServlet(value = "/myServlet")
 public class myServlet implements Servlet {
+
+    public myServlet(){
+        System.out.println("1. 构建");
+    }
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
+        System.out.println("2. 初始化");
     }
 
     @Override
@@ -49,6 +55,6 @@ public class myServlet implements Servlet {
 
     @Override
     public void destroy() {
-
+        System.out.println("3. 销毁");
     }
 }
